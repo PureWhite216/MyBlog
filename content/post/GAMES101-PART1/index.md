@@ -2,41 +2,47 @@
 author = "NekoRAM7"
 title = "GAMES101 Note(Part1)"
 date = "2022-05-08"
-description = "An article to show the procedure to start a game powered by Unreal Engine."
+description = "The note of GAMES101"
 tags = [
-    "GameDev",
-    "UnrealEngine"
+    "CG",
+    "GameDev"
 ]
 categories = [
-    "GameDev",
-    "UnrealEngine"
+    "GAMES101"
 ]
-series = ["Unreal"]
+series = ["GAMES101"]
 aliases = ["migrate-from-jekyl"]
 image = "Image.jpg"
 +++
 
-This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.
+This article is the first part of the GAMES101 note, including `Overview of CG`, `Linear Algebra` and `Transformation Matrix`
 <!--more-->
 
 
-# GAMES101
 ## 1. Overview of CG
-### 1.1 简单辨别CG技术好坏的根据-画面是否足够亮
-全局光照技术优良的游戏画面会相对“明亮”
-### 1.2 主要内容
-#### 1.2.1 Rasterization（光栅化）
-把3维空间的几何体显示在显示器上
+### 1.1 A simple standard to judge the CG tech - Brightness
+The game with great **Globoal Illumination** will have a brighter scene.
+### 1.2 Main Content
+#### 1.2.1 Rasterization
+Display geometry in 3D space on 2D screen.
 #### 1.2.2 Curves and Meshes
 #### 1.2.3 Ray Tracing
 #### 1.2.4 Animation/Simulation
 
 ## 2. Linear Algebra
 ### 2.1 Vector
-长度、方向、单位化、加减、点积、叉积  
-叉积的用途：判断两个向量的左右，判断内外
+1. length, direction
+2. unitization, addition and subtraction
+3. dot product, cross product
+
+#### The uses of Cross Product
+1. Judge the relative direction of two vectors
+2. Judge if the vector is inside or outside an area
 ### 2.2 Matrix
-矩阵乘法、结合律、分配律、转置、单位矩阵、逆矩阵
+1. multiplication
+2. associative, distributive 
+3. transpose
+4. identity matrix, inverse matrix
 
 ## 3. Transformation
 ### 3.1 Scale
@@ -46,7 +52,7 @@ x&0&0\\
 0&0&z\\
 \end{bmatrix}$$
 ### 3.2 Reflection
-#### 关于yz平面的对称 
+#### Symmetric about the yz plane
 $$\begin{bmatrix}
 -1&0&0\\
 0&1&0\\
@@ -222,7 +228,6 @@ $$
 #### Projection
 ##### Perspective and Orthographic
 
-## Rasterization
 
 
 
