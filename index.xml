@@ -1,18 +1,270 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Example Site</title>
-        <link>https://PureWhite216.github.io/MyBlog/</link>
-        <description>Recent content on Example Site</description>
+        <title>PureWhite216</title>
+        <link>https://PureWhite216.github.io/</link>
+        <description>Recent content on PureWhite216</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>UE Framework-How to start the gmae</title>
+        <link>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-gmae/</link>
+        <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-gmae/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-how-to-start-the-gmae/Image.jpg" alt="Featured image of post UE Framework-How to start the gmae" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+&lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 游戏循环的大致过程
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g_exit_requested&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;poll_input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;shutdown&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;launch&#34;&gt;Launch&lt;/h2&gt;
+&lt;p&gt;游戏通过各个平台的launch文件启动。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 简化后的launch.cpp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;#34;LaunchEngineLoop.h&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FEngineLoop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GIsRequestingExit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;int32&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;GuardedMain&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TCHAR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CmdLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Run early Initialization, load engine modules
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;int32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PreInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CmdLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// PreInit加载了大多数模块
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GisRequestingExit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Create and initialize a UEngine, run late initialization, start the game
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Every frame: kick off rendering, tick the engine, update RHI
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GIsRequestingExit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Tick&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Run cleanup and exit when requested
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;GEngineLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ErrorLevel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;GEngineLoop.PreInit（）&lt;/h2&gt;
+&lt;p&gt;引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
+&lt;img src=&#34;https://PureWhite216.github.io/Photos/1.JPG&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;G1&#34;
+	
+	
+&gt;
+在Game Loop的&lt;code&gt;PreInit&lt;/code&gt;阶段会先加载一些低级模块，为后续的初始化做准备，如定义基本类型。&lt;/p&gt;
+&lt;h3 id=&#34;加载顺序&#34;&gt;加载顺序：&lt;/h3&gt;
+&lt;h4 id=&#34;1-loadcoremodules&#34;&gt;1. LoadCoreModules&lt;/h4&gt;
+&lt;p&gt;CoreUObject&lt;/p&gt;
+&lt;h4 id=&#34;2-loadpreinitmodules&#34;&gt;2. LoadPreInitModules&lt;/h4&gt;
+&lt;p&gt;Engine
+Renderer
+Rendering APIs
+AnimGraphRuntime
+SlateRHIRenderer
+Landscape
+RenderCore&lt;/p&gt;
+&lt;h4 id=&#34;3-project--plugin-early-loading&#34;&gt;3. Project &amp;amp; Plugin (Early Loading)&lt;/h4&gt;
+&lt;h4 id=&#34;4-loadstartupcoremodules&#34;&gt;4. LoadStartupCoreModules&lt;/h4&gt;
+&lt;p&gt;Core
+Networking
+XAudio2
+Messaging
+Slate
+UMG
+Overlay
+ClothingSystemRuntimeNv
+PacketHandler
+&amp;hellip;&lt;/p&gt;
+&lt;h4 id=&#34;5-project--plugin-default-point&#34;&gt;5. Project &amp;amp; Plugin (Default Point)&lt;/h4&gt;
+&lt;p&gt;GamePlay Codes&lt;/p&gt;
+&lt;h3 id=&#34;模块加载流程&#34;&gt;模块加载流程&lt;/h3&gt;
+&lt;p&gt;1.首先，引擎注册该模块中定义的所有&lt;code&gt;UObject&lt;/code&gt;类，从而被反射系统获知，并且为每个类构造一个CDO(Class Default Object)。CDO是对类的默认状态的记录，并且充当之后的继承的原型。引擎循环分配CDO，运行其构造函数，并传递父类的CDO作为模板。因此构造函数中不应该包含Gameplay代码。
+2.第二，引擎调用了模块的&lt;code&gt;StartupModule&lt;/code&gt;函数，其与&lt;code&gt;ShutdownModule&lt;/code&gt;相对应，从而在模块的生命周期中执行所需的初始化。&lt;/p&gt;
+&lt;p&gt;综上，&lt;code&gt;GEngineLoop.PreInit()&lt;/code&gt;加载了后续初始化所需的底层系统、引擎块、工程以及插件模块。&lt;/p&gt;
+&lt;h2 id=&#34;gengineloopinit&#34;&gt;GEngineLoop.Init()&lt;/h2&gt;
+&lt;h3 id=&#34;创建ugameengine实例&#34;&gt;创建UGameEngine实例&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GEngine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UEngine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetTransientPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EngineClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;UEngine&lt;/code&gt;派生出&lt;code&gt;UEditorEngine&lt;/code&gt;与&lt;code&gt;UGameEngine&lt;/code&gt;。
+引擎首先检查配置文件来决定使用哪个类，然后创建该类的一个实例&lt;code&gt;GEngine&lt;/code&gt;，并将其作为全局的UGameEngine实例。
+&lt;code&gt;GEngine&lt;/code&gt;在Engine/Engine.h声明。&lt;/p&gt;
+&lt;h3 id=&#34;初始化gengine&#34;&gt;初始化GEngine&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Initialize the engine: this creates UGameInstance and UGameViewPortClient
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GEngine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ParseCommandline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GEngine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FCoreDelegates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OnPostEngineInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Broadcas&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;初始化后引擎会触发一个全局委托&lt;code&gt;OnPostEngineInit&lt;/code&gt;来指示引擎现已初始化。&lt;/p&gt;
+&lt;h3 id=&#34;初始化所有后加载的模块&#34;&gt;初始化所有后加载的模块&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Initialize any late-loaded modules
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IProjectManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadModulesForProject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EloadingPhase&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostEngineInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;IPluginManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadMoudlesForEnabledPlugings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EloadingPhase&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostEngineInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;至此，引擎启动，前期初始化完成。&lt;/p&gt;
+&lt;h3 id=&#34;进入map&#34;&gt;进入Map&lt;/h3&gt;
+&lt;p&gt;UEngine类能够使玩家在引擎启动后进入地图中。
+引擎能够浏览到一个URL， 其表示要作为客户端连接的服务器地址（本地为127.0.0.1），也可以表示要在本地加载的地图的名称。&lt;/p&gt;
+&lt;h2 id=&#34;引擎启动后的初始化&#34;&gt;引擎启动后的初始化&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// In GameEngine.cpp； UGameEngine::Init()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Load and apply user game settings
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetGameUserSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GetGameUserSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ApplyNonResolutionSettings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create an UGameInstance using the class specified by project config
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FSoftClassPath&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClassName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GetDefault&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameMapsSettings&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;UClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullptr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstanceClassName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ToString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstanceClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create FWorldContext and dummy UWorld; initialize subsystems
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InitializeStandalone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create an UGameViewportClient and initialize it
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportCLient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameViewportClientClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetWorldContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameViewport&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameInstance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetWorldContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameViewport&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CreateGameViewport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Create a ULocalPlayer and associate it with the view client
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FString&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SetupInitalLocalPlayer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;UGameViewportClient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OnviewportCreated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Broadcast&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;加载地图前,引擎通过创建&lt;code&gt;UGameInstance&lt;/code&gt;, &lt;code&gt;UGameViewportClient&lt;/code&gt;和&lt;code&gt;ULocalPlayer&lt;/code&gt;来进行初始化
+&lt;code&gt;ULocalPlayer&lt;/code&gt;可以被视为代表屏幕前的用户。
+&lt;code&gt;UGameViewportClient&lt;/code&gt;本质上是渲染、音频和输入系统的高级接口，即用户和引擎之间的接口。
+&lt;code&gt;UGameInstance&lt;/code&gt;处理一些特定于项目的功能，GameEngine中只能创建唯一一个。&lt;/p&gt;</description>
+        </item>
+        <item>
         <title>Noctambulism</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/noctambulism/</link>
+        <link>https://PureWhite216.github.io/p/noctambulism/</link>
         <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/noctambulism/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
+        <guid>https://PureWhite216.github.io/p/noctambulism/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
 &lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
 
 
@@ -37,19 +289,19 @@
         </item>
         <item>
         <title>Archives</title>
-        <link>https://PureWhite216.github.io/MyBlog/archives/</link>
+        <link>https://PureWhite216.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/archives/</guid>
+        <guid>https://PureWhite216.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/</link>
+        <link>https://PureWhite216.github.io/p/markdown-syntax-guide/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
 &lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
 &lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
@@ -274,63 +526,42 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Rich Content</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/rich-content/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://PureWhite216.github.io/MyBlog/p/rich-content/</guid>
-        <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
-
-
-
-
-
-
-    
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=498363026&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>مثال نص</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</link>
+        <title>Placeholder Text</title>
+        <link>https://PureWhite216.github.io/p/placeholder-text/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post مثال نص" /&gt;&lt;h2 id=&#34;فقرة-1&#34;&gt;فقرة 1&lt;/h2&gt;
-&lt;p&gt;هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من &lt;a class=&#34;link&#34; href=&#34;https://colorslab.com/textgator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;مولد النص العربى&lt;/a&gt;، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
-إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
-هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.&lt;/p&gt;
-&lt;h2 id=&#34;فقرة-2&#34;&gt;فقرة 2&lt;/h2&gt;
-&lt;p&gt;هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من &lt;a class=&#34;link&#34; href=&#34;https://colorslab.com/textgator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;مولد النص العربى&lt;/a&gt;، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
-إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
-هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.&lt;/p&gt;
-&lt;h2 id=&#34;تجربة-rtl&#34;&gt;تجربة RTL&lt;/h2&gt;
-&lt;p&gt;كلمة 1 Text كلمة 2&lt;/p&gt;
-</description>
+        <guid>https://PureWhite216.github.io/p/placeholder-text/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
+&lt;li&gt;Duce pollice&lt;/li&gt;
+&lt;li&gt;Eris modo&lt;/li&gt;
+&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
+&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
+&lt;li&gt;Flumen querellas&lt;/li&gt;
+&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
+&lt;li&gt;Quidem et&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h2&gt;
+&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
+&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
+&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
         </item>
         <item>
         <title>Math Typesetting</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/math-typesetting/</link>
+        <link>https://PureWhite216.github.io/p/math-typesetting/</link>
         <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/math-typesetting/</guid>
+        <guid>https://PureWhite216.github.io/p/math-typesetting/</guid>
         <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
@@ -368,11 +599,11 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Emoji Support</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/emoji-support/</link>
+        <link>https://PureWhite216.github.io/p/emoji-support/</link>
         <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/emoji-support/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/emoji-support/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -398,10 +629,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>About</title>
-        <link>https://PureWhite216.github.io/MyBlog/about/</link>
+        <link>https://PureWhite216.github.io/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/about/</guid>
+        <guid>https://PureWhite216.github.io/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -426,10 +657,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://PureWhite216.github.io/MyBlog/links/</link>
+        <link>https://PureWhite216.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/links/</guid>
+        <guid>https://PureWhite216.github.io/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -461,10 +692,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://PureWhite216.github.io/MyBlog/search/</link>
+        <link>https://PureWhite216.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/search/</guid>
+        <guid>https://PureWhite216.github.io/search/</guid>
         <description></description>
         </item>
         
