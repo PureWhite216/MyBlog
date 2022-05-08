@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GameDev</title>
-        <link>https://PureWhite216.github.io/MyBlog/categories/gamedev/</link>
+        <title>GAMES101</title>
+        <link>https://PureWhite216.github.io/MyBlog/categories/games101/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/categories/gamedev/</guid>
+        <guid>https://PureWhite216.github.io/MyBlog/categories/games101/</guid>
         <description></description>
         </item>
         <item>
@@ -20,6 +20,14 @@
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://PureWhite216.github.io/MyBlog/categories/unrealengine/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>IndieGame</title>
+        <link>https://PureWhite216.github.io/MyBlog/categories/indiegame/</link>
+        <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://PureWhite216.github.io/MyBlog/categories/indiegame/</guid>
         <description></description>
         </item>
         <item>

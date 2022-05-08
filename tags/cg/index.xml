@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CG on NekoRAM7</title>
+        <link>https://PureWhite216.github.io/MyBlog/tags/cg/</link>
+        <description>Recent content in CG on NekoRAM7</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/tags/cg/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GAMES101 Note(Part1)</title>
+        <link>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</link>
+        <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-overview-of-cg&#34;&gt;1. Overview of CG&lt;/h2&gt;
+&lt;h3 id=&#34;11-a-simple-standard-to-judge-the-cg-tech---brightness&#34;&gt;1.1 A simple standard to judge the CG tech - Brightness&lt;/h3&gt;
+&lt;p&gt;The game with greater &lt;strong&gt;Globoal Illumination&lt;/strong&gt; will have a brighter scene.&lt;/p&gt;
+&lt;h3 id=&#34;12-main-content&#34;&gt;1.2 Main Content&lt;/h3&gt;
+&lt;h4 id=&#34;121-rasterization&#34;&gt;1.2.1 Rasterization&lt;/h4&gt;
+&lt;p&gt;Display geometry in 3D space on 2D screen.&lt;/p&gt;
+&lt;h4 id=&#34;122-curves-and-meshes&#34;&gt;1.2.2 Curves and Meshes&lt;/h4&gt;
+&lt;h4 id=&#34;123-ray-tracing&#34;&gt;1.2.3 Ray Tracing&lt;/h4&gt;
+&lt;h4 id=&#34;124-animationsimulation&#34;&gt;1.2.4 Animation/Simulation&lt;/h4&gt;
+&lt;h2 id=&#34;2-linear-algebra&#34;&gt;2. Linear Algebra&lt;/h2&gt;
+&lt;h3 id=&#34;21-vector&#34;&gt;2.1 Vector&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;length, direction&lt;/li&gt;
+&lt;li&gt;unitization, addition and subtraction&lt;/li&gt;
+&lt;li&gt;dot product, cross product&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;the-uses-of-cross-product&#34;&gt;The uses of Cross Product&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Judge the relative direction of two vectors&lt;/li&gt;
+&lt;li&gt;Judge if the vector is inside or outside an area&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;22-matrix&#34;&gt;2.2 Matrix&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;multiplication&lt;/li&gt;
+&lt;li&gt;associative, distributive&lt;/li&gt;
+&lt;li&gt;transpose&lt;/li&gt;
+&lt;li&gt;identity matrix, inverse matrix&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-transformation&#34;&gt;3. Transformation&lt;/h2&gt;
+&lt;h3 id=&#34;31-scale&#34;&gt;3.1 Scale&lt;/h3&gt;
+&lt;p&gt;$$\begin{bmatrix}
+x&amp;amp;0&amp;amp;0\
+0&amp;amp;y&amp;amp;0\
+0&amp;amp;0&amp;amp;z\
+\end{bmatrix}$$&lt;/p&gt;
+&lt;h3 id=&#34;32-reflection&#34;&gt;3.2 Reflection&lt;/h3&gt;
+&lt;h4 id=&#34;symmetric-about-the-yz-plane&#34;&gt;Symmetric about the yz plane&lt;/h4&gt;
+&lt;p&gt;$$\begin{bmatrix}
+-1&amp;amp;0&amp;amp;0\
+0&amp;amp;1&amp;amp;0\
+0&amp;amp;0&amp;amp;1\
+\end{bmatrix}$$&lt;/p&gt;
+&lt;h3 id=&#34;33-shear&#34;&gt;3.3 Shear&lt;/h3&gt;
+&lt;h4 id=&#34;2d&#34;&gt;2D&lt;/h4&gt;
+&lt;p&gt;$$\begin{bmatrix}
+1&amp;amp;a\
+0&amp;amp;1
+\end{bmatrix}$$&lt;/p&gt;
+&lt;h3 id=&#34;34-rotation&#34;&gt;3.4 Rotation&lt;/h3&gt;
+&lt;h4 id=&#34;2d-1&#34;&gt;2D&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+cos\theta&amp;amp;-sin\theta\
+sin\theta&amp;amp;cos\theta
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3d&#34;&gt;3D&lt;/h4&gt;
+&lt;p&gt;$$
+Rx(\alpha)=
+\begin{bmatrix}
+1&amp;amp;0&amp;amp;0&amp;amp;0\
+0&amp;amp;cos\alpha&amp;amp;-sin\alpha&amp;amp;0\
+0&amp;amp;sin\alpha&amp;amp;cos\alpha&amp;amp;0\
+0&amp;amp;0&amp;amp;0&amp;amp;1\
+\end{bmatrix}&lt;br&gt;
+$$
+$$
+Ry(\alpha)=
+\begin{bmatrix}
+cos\alpha&amp;amp;0&amp;amp;sin\alpha&amp;amp;0\
+0&amp;amp;1&amp;amp;0&amp;amp;0\
+-sin\alpha&amp;amp;0&amp;amp;cos\alpha&amp;amp;0\
+0&amp;amp;0&amp;amp;0&amp;amp;1\
+\end{bmatrix}
+$$
+$$
+Rz(\alpha)=
+\begin{bmatrix}
+cos\alpha&amp;amp;-sin\alpha&amp;amp;0&amp;amp;0\
+sin\alpha&amp;amp;cos\alpha&amp;amp;0&amp;amp;0\
+0&amp;amp;0&amp;amp;1&amp;amp;0\
+0&amp;amp;0&amp;amp;0&amp;amp;1\
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;rodrigues-rotation-formula&#34;&gt;Rodrigues&amp;rsquo; Rotation Formula&lt;/h5&gt;
+&lt;h3 id=&#34;35-homogenous-coordinates&#34;&gt;3.5 Homogenous Coordinates&lt;/h3&gt;
+&lt;h4 id=&#34;2d-point&#34;&gt;2D Point&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+x\y\1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3d-point&#34;&gt;3D Point&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+x\y\z\1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2d-vector&#34;&gt;2D Vector&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+x\y\0
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3d-vector&#34;&gt;3D Vector&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+x\y\z\0
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2d-translation&#34;&gt;2D Translation&lt;/h4&gt;
+&lt;h1 id=&#34;endbmatrix&#34;&gt;$$
+\begin{bmatrix}
+x&amp;rsquo;\y&amp;rsquo;\w&#39;
+\end{bmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{bmatrix}
+1&amp;amp;0&amp;amp;a\
+0&amp;amp;1&amp;amp;b\
+0&amp;amp;0&amp;amp;1\
+\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;\begin{bmatrix}
+x\y\1
+\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;=&lt;/p&gt;
+&lt;p&gt;\begin{bmatrix}
+x+a\y+b\1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;operation&#34;&gt;Operation&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;vector + vector = vector&lt;/li&gt;
+&lt;li&gt;vector + point = point&lt;/li&gt;
+&lt;li&gt;point - point = vector&lt;/li&gt;
+&lt;li&gt;point + point = mid point
+$$
+\begin{bmatrix}
+x\y\z\w
+\end{bmatrix}
+=
+\begin{bmatrix}
+x/w\y/w\z/w\1
+\end{bmatrix}
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;36-affine-transformation&#34;&gt;3.6 Affine Transformation&lt;/h3&gt;
+&lt;h4 id=&#34;affine-map--linear-map--translation&#34;&gt;Affine map = Linear map + Translation&lt;/h4&gt;
+&lt;h1 id=&#34;endbmatrix-1&#34;&gt;$$
+\begin{bmatrix}
+x&amp;rsquo;\y&amp;rsquo;\z&#39;
+\end{bmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{bmatrix}
+a&amp;amp;b&amp;amp;c\
+d&amp;amp;e&amp;amp;f\
+g&amp;amp;h&amp;amp;i\
+\end{bmatrix}
+\begin{bmatrix}
+x\y\z
+\end{bmatrix}
++
+\begin{bmatrix}
+tx\ty\tz
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;using-homogenous-coordinates&#34;&gt;Using Homogenous Coordinates:&lt;/h4&gt;
+&lt;h1 id=&#34;endbmatrix-2&#34;&gt;$$
+\begin{bmatrix}
+x&amp;rsquo;\y&amp;rsquo;\z&amp;rsquo;\1
+\end{bmatrix}&lt;/h1&gt;
+&lt;p&gt;\begin{bmatrix}
+a&amp;amp;b&amp;amp;c&amp;amp;tx\
+d&amp;amp;e&amp;amp;f&amp;amp;ty\
+g&amp;amp;h&amp;amp;i&amp;amp;tz\
+0&amp;amp;0&amp;amp;0&amp;amp;1\
+\end{bmatrix}
+\begin{bmatrix}
+x\y\z\1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;37-compose-and-decompose-complex-transforms&#34;&gt;3.7 Compose and Decompose Complex Transforms&lt;/h3&gt;
+&lt;h3 id=&#34;38-viewcamera-transformation&#34;&gt;3.8 View/Camera Transformation&lt;/h3&gt;
+&lt;h4 id=&#34;mvp&#34;&gt;MVP&lt;/h4&gt;
+&lt;p&gt;$$
+Model\rarr View\rarr Projection
+$$&lt;/p&gt;
+&lt;h4 id=&#34;how-to-define-a-camera&#34;&gt;How to define a camera&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Positoin&lt;/li&gt;
+&lt;li&gt;Look at Direction&lt;/li&gt;
+&lt;li&gt;Up Direction&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;view-matrix&#34;&gt;View Matrix&lt;/h4&gt;
+&lt;p&gt;$$
+M_{view}=R_{view}T_{view}
+$$
+$$
+R_{view}^{-1}=R_{view}^{T}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;projection&#34;&gt;Projection&lt;/h4&gt;
+&lt;h5 id=&#34;perspective-and-orthographic&#34;&gt;Perspective and Orthographic&lt;/h5&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

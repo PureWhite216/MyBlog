@@ -7,6 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CG</title>
+        <link>https://PureWhite216.github.io/MyBlog/tags/cg/</link>
+        <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://PureWhite216.github.io/MyBlog/tags/cg/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>GameDev</title>
         <link>https://PureWhite216.github.io/MyBlog/tags/gamedev/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
@@ -23,7 +31,7 @@
         <description></description>
         </item>
         <item>
-        <title>demo</title>
+        <title>Demo</title>
         <link>https://PureWhite216.github.io/MyBlog/tags/demo/</link>
         <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
         
@@ -31,11 +39,19 @@
         <description></description>
         </item>
         <item>
-        <title>game</title>
+        <title>Game</title>
         <link>https://PureWhite216.github.io/MyBlog/tags/game/</link>
         <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://PureWhite216.github.io/MyBlog/tags/game/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Unity</title>
+        <link>https://PureWhite216.github.io/MyBlog/tags/unity/</link>
+        <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://PureWhite216.github.io/MyBlog/tags/unity/</guid>
         <description></description>
         </item>
         <item>
