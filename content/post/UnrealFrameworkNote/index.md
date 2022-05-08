@@ -11,7 +11,7 @@ categories = [
     "GameDev",
     "UnrealEngine"
 ]
-series = ["Themes Guide"]
+series = ["Unreal"]
 aliases = ["migrate-from-jekyl"]
 image = "Image.jpg"
 +++
