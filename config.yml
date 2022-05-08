@@ -1,17 +1,17 @@
-baseURL: https://PureWhite216.github.io/MyBlog
+baseURL: https://PureWhite216.github.io
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: Example Site
+title: PureWhite216
 
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: PureWhite216
         weight: 1
     zh-cn:
         languageName: 中文
-        title: 演示站点
+        title: PureWhite216
         weight: 2
 
 # Change it to your Disqus shortname before using
@@ -49,11 +49,11 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: An Idie Game Developer.
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/avatar.jpg
 
     article:
         math: false
