@@ -1,5 +1,5 @@
 +++
-author = "Qiu Junqi"
+author = "NekoRAM7"
 title = "Noctambulism"
 date = "2022-05-07"
 description = "This is an indie game demo made in 5 days with my teammates."
