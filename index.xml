@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>UE Framework-How to start the gmae</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-gmae/</link>
+        <title>UE Framework-How to start the game</title>
+        <link>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-gmae/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-gmae/Image.jpg" alt="Featured image of post UE Framework-How to start the gmae" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
 &lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
