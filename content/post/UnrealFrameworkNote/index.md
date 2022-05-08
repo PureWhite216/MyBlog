@@ -8,7 +8,6 @@ tags = [
     "UnrealEngine"
 ]
 categories = [
-    "GameDev",
     "UnrealEngine"
 ]
 series = ["Unreal"]

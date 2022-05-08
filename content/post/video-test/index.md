@@ -4,8 +4,13 @@ title = "Noctambulism"
 date = "2022-05-07"
 description = "This is an indie game demo made in 5 days with my teammates."
 tags = [
-    "game",
-    "demo"
+    "Game",
+    "Demo",
+    "GameDev",
+    "Unity"
+]
+categories = [
+    "IndieGame"
 ]
 image = "封面.jpg"
 +++

@@ -21,7 +21,7 @@ This article is the first part of the GAMES101 note, including `Overview of CG`,
 
 ## 1. Overview of CG
 ### 1.1 A simple standard to judge the CG tech - Brightness
-The game with great **Globoal Illumination** will have a brighter scene.
+The game with greater **Globoal Illumination** will have a brighter scene.
 ### 1.2 Main Content
 #### 1.2.1 Rasterization
 Display geometry in 3D space on 2D screen.
