@@ -1,6 +1,6 @@
 +++
 author = "PureWhite216"
-title = "UE Framework-How to start the gmae"
+title = "UE Framework-How to start the game"
 date = "2022-05-08"
 description = "An article to show the procedure to start a game powered by Unreal Engine."
 tags = [
