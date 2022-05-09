@@ -24,9 +24,9 @@ This article is a note of my English course in Grade 1, which concentrates on `T
 Thesis Statement should clearly demonstrate author’s position, which means one aspect most overwhelms the other one, and there should be only one idea in TS.
 
 ### Steps to Generate a Thesis Statement
-1. `Topic`: Problem posed by drug addiction
-2. `Your interest`: The problem of crack babies
-3. `General subject`: Crack babies
+1. `Topic`: Problem posed by drug addiction.
+2. `Your interest`: The problem of crack babies.
+3. `General subject`: Crack babies.
 4. `Narrow the topic`: Programs for crack kids.
 5. `Take a position on the the topic`:Have a target, Take a position and Give an idea, such as
  "More attention should be paid to the environment crack kids grow up in."
