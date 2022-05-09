@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>UnrealEngine on NekoRAM7</title>
-        <link>https://PureWhite216.github.io/MyBlog/categories/unrealengine/</link>
+        <link>https://PureWhite216.github.io/categories/unrealengine/</link>
         <description>Recent content in UnrealEngine on NekoRAM7</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/categories/unrealengine/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/categories/unrealengine/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>UE Framework-How to start the game</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</link>
+        <link>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
 &lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -110,7 +110,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;GEngineLoop.PreInit（）&lt;/h2&gt;
 &lt;p&gt;引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
-&lt;img src=&#34;https://PureWhite216.github.io/MyBlog/MyBlog/Photos/1.JPG&#34;
+&lt;img src=&#34;https://PureWhite216.github.io/Photos/1.JPG&#34;
 	
 	
 	

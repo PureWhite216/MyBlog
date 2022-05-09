@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CG on NekoRAM7</title>
-        <link>https://PureWhite216.github.io/MyBlog/tags/cg/</link>
+        <link>https://PureWhite216.github.io/tags/cg/</link>
         <description>Recent content in CG on NekoRAM7</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/tags/cg/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/tags/cg/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GAMES101 Note(Part1)</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</link>
+        <link>https://PureWhite216.github.io/p/games101-notepart1/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/games101-notepart1/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1-overview-of-cg&#34;&gt;1. Overview of CG&lt;/h2&gt;
 &lt;h3 id=&#34;11-a-simple-standard-to-judge-the-cg-tech---brightness&#34;&gt;1.1 A simple standard to judge the CG tech - Brightness&lt;/h3&gt;
 &lt;p&gt;The game with greater &lt;strong&gt;Globoal Illumination&lt;/strong&gt; will have a brighter scene.&lt;/p&gt;

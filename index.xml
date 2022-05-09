@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>NekoRAM7</title>
-        <link>https://PureWhite216.github.io/MyBlog/</link>
+        <link>https://PureWhite216.github.io/</link>
         <description>Recent content on NekoRAM7</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Academic Writing in English</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/academic-writing-in-english/</link>
+        <link>https://PureWhite216.github.io/p/academic-writing-in-english/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/academic-writing-in-english/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/academic-writing-in-english/Image.jpg" alt="Featured image of post Academic Writing in English" /&gt;&lt;p&gt;This article is a note of my English course in Grade 1, which concentrates on &lt;code&gt;Thesis Statement&lt;/code&gt; and &lt;code&gt;Six Principle of Academic Writing&lt;/code&gt;.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/academic-writing-in-english/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/academic-writing-in-english/Image.jpg" alt="Featured image of post Academic Writing in English" /&gt;&lt;p&gt;This article is a note of my English course in Grade 1, which concentrates on &lt;code&gt;Thesis Statement&lt;/code&gt; and &lt;code&gt;Six Principle of Academic Writing&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;thesis-statement-the-core-of-academic-writing&#34;&gt;Thesis Statement, the Core of Academic Writing&lt;/h2&gt;
 &lt;h3 id=&#34;main-point&#34;&gt;Main Point&lt;/h3&gt;
 &lt;p&gt;Thesis Statement should clearly demonstrate author’s position, which means one aspect most overwhelms the other one, and there should be only one idea in TS.&lt;/p&gt;
@@ -108,11 +108,11 @@ Long-term drug use can have disastrous effects on one’s marriage career, and h
         </item>
         <item>
         <title>GAMES101 Note(Part1)</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</link>
+        <link>https://PureWhite216.github.io/p/games101-notepart1/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/games101-notepart1/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1-overview-of-cg&#34;&gt;1. Overview of CG&lt;/h2&gt;
 &lt;h3 id=&#34;11-a-simple-standard-to-judge-the-cg-tech---brightness&#34;&gt;1.1 A simple standard to judge the CG tech - Brightness&lt;/h3&gt;
 &lt;p&gt;The game with greater &lt;strong&gt;Globoal Illumination&lt;/strong&gt; will have a brighter scene.&lt;/p&gt;
@@ -315,11 +315,11 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>UE Framework-How to start the game</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</link>
+        <link>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
 &lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -417,7 +417,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;GEngineLoop.PreInit（）&lt;/h2&gt;
 &lt;p&gt;引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
-&lt;img src=&#34;https://PureWhite216.github.io/MyBlog/MyBlog/Photos/1.JPG&#34;
+&lt;img src=&#34;https://PureWhite216.github.io/Photos/1.JPG&#34;
 	
 	
 	
@@ -567,11 +567,11 @@ PacketHandler
         </item>
         <item>
         <title>Noctambulism</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/noctambulism/</link>
+        <link>https://PureWhite216.github.io/p/noctambulism/</link>
         <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/noctambulism/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
+        <guid>https://PureWhite216.github.io/p/noctambulism/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
 &lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
 
 
@@ -596,19 +596,19 @@ PacketHandler
         </item>
         <item>
         <title>Archives</title>
-        <link>https://PureWhite216.github.io/MyBlog/archives/</link>
+        <link>https://PureWhite216.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/archives/</guid>
+        <guid>https://PureWhite216.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/</link>
+        <link>https://PureWhite216.github.io/p/markdown-syntax-guide/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
 &lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
 &lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
@@ -834,11 +834,11 @@ PacketHandler
         </item>
         <item>
         <title>Placeholder Text</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/placeholder-text/</link>
+        <link>https://PureWhite216.github.io/p/placeholder-text/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/placeholder-text/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/placeholder-text/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
 &lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
@@ -865,10 +865,10 @@ PacketHandler
         </item>
         <item>
         <title>Math Typesetting</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/math-typesetting/</link>
+        <link>https://PureWhite216.github.io/p/math-typesetting/</link>
         <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/math-typesetting/</guid>
+        <guid>https://PureWhite216.github.io/p/math-typesetting/</guid>
         <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
@@ -906,11 +906,11 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Emoji Support</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/emoji-support/</link>
+        <link>https://PureWhite216.github.io/p/emoji-support/</link>
         <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/emoji-support/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/emoji-support/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -936,10 +936,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>About</title>
-        <link>https://PureWhite216.github.io/MyBlog/about/</link>
+        <link>https://PureWhite216.github.io/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/about/</guid>
+        <guid>https://PureWhite216.github.io/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -964,10 +964,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://PureWhite216.github.io/MyBlog/links/</link>
+        <link>https://PureWhite216.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/links/</guid>
+        <guid>https://PureWhite216.github.io/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -999,10 +999,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://PureWhite216.github.io/MyBlog/search/</link>
+        <link>https://PureWhite216.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/search/</guid>
+        <guid>https://PureWhite216.github.io/search/</guid>
         <description></description>
         </item>
         

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>GameDev on NekoRAM7</title>
-        <link>https://PureWhite216.github.io/MyBlog/tags/gamedev/</link>
+        <link>https://PureWhite216.github.io/tags/gamedev/</link>
         <description>Recent content in GameDev on NekoRAM7</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/MyBlog/tags/gamedev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://PureWhite216.github.io/tags/gamedev/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GAMES101 Note(Part1)</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</link>
+        <link>https://PureWhite216.github.io/p/games101-notepart1/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/games101-notepart1/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/games101-notepart1/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/games101-notepart1/Image.jpg" alt="Featured image of post GAMES101 Note(Part1)" /&gt;&lt;p&gt;This article is the first part of the GAMES101 note, including &lt;code&gt;Overview of CG&lt;/code&gt;, &lt;code&gt;Linear Algebra&lt;/code&gt; and &lt;code&gt;Transformation Matrix&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1-overview-of-cg&#34;&gt;1. Overview of CG&lt;/h2&gt;
 &lt;h3 id=&#34;11-a-simple-standard-to-judge-the-cg-tech---brightness&#34;&gt;1.1 A simple standard to judge the CG tech - Brightness&lt;/h3&gt;
 &lt;p&gt;The game with greater &lt;strong&gt;Globoal Illumination&lt;/strong&gt; will have a brighter scene.&lt;/p&gt;
@@ -215,11 +215,11 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>UE Framework-How to start the game</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</link>
+        <link>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</link>
         <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
+        <guid>https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/ue-framework-how-to-start-the-game/Image.jpg" alt="Featured image of post UE Framework-How to start the game" /&gt;&lt;p&gt;This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.&lt;/p&gt;
 &lt;h2 id=&#34;game-loop&#34;&gt;Game Loop&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -317,7 +317,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;genginelooppreinit&#34;&gt;GEngineLoop.PreInit（）&lt;/h2&gt;
 &lt;p&gt;引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
-&lt;img src=&#34;https://PureWhite216.github.io/MyBlog/MyBlog/Photos/1.JPG&#34;
+&lt;img src=&#34;https://PureWhite216.github.io/Photos/1.JPG&#34;
 	
 	
 	
@@ -467,11 +467,11 @@ PacketHandler
         </item>
         <item>
         <title>Noctambulism</title>
-        <link>https://PureWhite216.github.io/MyBlog/p/noctambulism/</link>
+        <link>https://PureWhite216.github.io/p/noctambulism/</link>
         <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://PureWhite216.github.io/MyBlog/p/noctambulism/</guid>
-        <description>&lt;img src="https://PureWhite216.github.io/MyBlog/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
+        <guid>https://PureWhite216.github.io/p/noctambulism/</guid>
+        <description>&lt;img src="https://PureWhite216.github.io/p/noctambulism/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post Noctambulism" /&gt;&lt;h2 id=&#34;this-is-an-indie-game-demo-made-in-5-days-with-my-teammates&#34;&gt;This is an indie game demo made in 5 days with my teammates.&lt;/h2&gt;
 &lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
 
 
