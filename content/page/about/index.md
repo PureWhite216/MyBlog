@@ -15,9 +15,10 @@ menu:
 ---
 
 ## Info
-**Age:** 20
-**School:** Beihang University(BUAA)
-**Major:** Software Engineering
+**Age:** 20  
+**School:** Beihang University(BUAA)  
+**Major:** Software Engineering   
+
 **Interests:** 
 1. Video Game(Both Play and Develop)
 2. Music 
@@ -28,5 +29,5 @@ menu:
 **Currently Doing:** Studying Unreal Engine, NPR, Animtation, Trying to make some artworks.
 
 ## Contact Me
-**Email:** 805290715@qq.com
-**Wechat:** buaa_qjq
+**Email:** `805290715@qq.com`  
+**Wechat:** `buaa_qjq`
