@@ -20,7 +20,7 @@ menu:
 **School:** Beihang University(BUAA)
 **Major:** Software Engineering
 **Interests:** 
-1. Video Game(Play and Develop)
+1. Video Game(Both Play and Develop)
 2. Music 
 3. 2D Art(Illustration, Character Concept Design, Scene Concept Design)
 4. 3D Art(Modeling, Animation)
