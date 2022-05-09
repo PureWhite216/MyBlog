@@ -192,15 +192,15 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/PureWhite216
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
+        - identifier: bilibili
+          name: Bilibili
+          url: https://space.bilibili.com/7829718
           params:
-              icon: brand-twitter
+              icon: brand-bilibili
 
 related:
     includeNewer: true
