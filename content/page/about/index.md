@@ -29,5 +29,5 @@ menu:
 **Currently Doing:** Studying Unreal Engine, NPR, Animtation, Trying to make some artworks.
 
 ## Contact Me
-**Email:** `805290715@qq.com`  
+**Email:** `nekoram7pro@gmail.com` or `805290715@qq.com`  
 **Wechat:** `buaa_qjq`
