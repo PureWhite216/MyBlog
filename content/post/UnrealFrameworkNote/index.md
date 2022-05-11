@@ -1,7 +1,7 @@
 +++
 author = "NekoRAM7"
 title = "UE Framework-From int main() to BeginPlay()"
-date = "2022-05-08"
+date = "2022-05-11"
 description = "An article to show the procedure to start a game powered by Unreal Engine."
 tags = [
     "GameDev",
@@ -172,4 +172,119 @@ UGameViewportClient::OnviewportCreated().Broadcast();
 ```
 Now, we have an `UGameEngine`, an `UGameInstance`, an `UGameViewportClient` and an `ULocalPlayer`. The game is ready to start.
 
+### Load Map
 ![](2.JPG)
+
+After Engine's initialization, `UEngine::LoadMap` is called.  
+By the end of `LoadMap`, we will have `UWorld` that containts all the actors saved into the map and a handful of newly-spawned actors that form the core of the GameFramework, including `GameMode`, `GameSession`, `GameState`, `PlayerController`, `PlayerState` and `Pawn`.  
+
+One of the key factors that separates these 2 sets of objexts is lifetime. Everything created before `LoadMap` is tied to the lifetime of the process. While things like `GameMdoe` are created after `LoadMap` is called only stick around as long as you are playing in the map.
+
+```cpp
+bool UEngine::LoadMap(FWorldContext& WorldContext, FURL URL, class UPendingNetGame* Pending, FString& Error)
+{
+    //Let any interested parties know that the current world is about to be unloaded
+    FCoreUObjectDelegates::PreLoadMap.Broadcast(URL.Map);
+    /* Omitted */
+    // If there is already a loaded map
+    // Destroy player-controlled Pawns and PlayerControllers
+    // Route the EndPlay event to all actors
+    // Clean up the world, destroy all actors
+
+    // Cache the current time so we can report total duration post-load
+    double StartTime =  FPlatformTime::Seconds();
+
+    // Notify the GameInstance of the map change in case it wants to load assets
+    WorldContext.OwningGameInstance->PreloadContentForURL(URL);
+
+    // Load our persistent level's map package and get the top-level UWorld
+    UPackage* WorldPackage = LoadPackage(nullptr, *URL.Map, LOAD_None);
+    UWorld* NewWorld = UWorld::FindWorldInPackage(WorldPackage);
+    
+    // Give the world a reference to the GameInstance
+    NewWorld->SetGameInstance(WorldContext.OwningGameInstance);
+    GWorld = NewWorld;
+
+    // Take the raw, just-loaded UWorld and get it ready for gameplay
+    WorldContext.SetCurrentWorld(NewWorld);
+    WorldContext.World()->WorldType = WorldContext.WorldType;
+    WorldContext.World()->AddToRoot();
+    WorldContext.World()->InitWorld();
+    WorldContext.World()->SetGameMode(URL);
+}
+```
+`UEngine::LoadMap()` takes in an parameter called `WorldContext`, which is created by the `GameInstance` during **Engine Initialization** and is essentially a persistnet object that keeps track of whichever world is loaded up at the moment.  
+
+Before anything else gets loaded the `GameInstance` has a chance to **preload** any assets that it might want.  
+
+![](3.JPG)
+During `LoadMap()`, the engine finds the map package and loads it. At this point, the World, its persistent level, and the actors in the level including the WorldSettings, have been loaded back into memory.
+
+The engine gives the `World` a reference to the `GameInstance`, and then initialized a global `GWorld` variable with a reference to the World.  
+
+Then the World is installed into the `WorldContext`. It has its World type initialized to game. And it's added to the root set, which prevents it from being garbage collected. `InitWorld` allows the world to set up systems like physics, navigation, AI and audio. When `SetGameMode()` is called, the World asks the `GameInstance` to create a`GameMode` in the world. Once the `GameMode` exists, the engine fully loads the map, meaning any always-loaded sublevels are loaded in, along with any referenced assets.
+
+### InitializeActorsForPlay()
+```cpp
+void UWorld::InitializeActorsForPlay(const FURL& InURL, bool bResetTime, FRegisterComponentContext* Context)
+{
+    // Register all actor components in the persistent level only.
+    PersistentLevel->UpdateLevelComponents(false, Context)
+
+    // Set bActorsInitialized so that future actors will be initialized on spawn.
+    bActorsInitialized = true;
+
+    // Initialize the GameMode: this spawns an AGameSession
+    AuthorityGameMode->InitGame(FPaths::GetBaseFilename(InURL.Map), ParseOptions(InURL), Error);
+	
+    // Route InitializeComponents (and PreInit/PostInit) to all actors, level-by-level.
+	for(ULevel* Level : Levels)
+    {
+        Level->RouteActorInitialize();
+    }
+
+	// Let others know the actors are initialized. There are two versions here for convenience.
+	FActorsInitializedParams OnActorInitParams(this, bResetTime);
+	OnActorsInitialized.Broadcast(OnActorInitParams);
+	FWorldDelegates::OnWorldInitializedActors.Broadcast(OnActorInitParams); // Global notification	
+}
+```  
+
+```cpp
+void UActorComponent::RegisterComponentWithWorld(UWorld* InWorld, FRegisterComponentContext* Context)
+{
+    // Give a reference to the world that the Component has been loaded into.
+	WorldPrivate = InWorld;
+
+    // Call the component's OnRegister() funtion, giving it a chance to do any early initialization.
+	if(!bRegistered)
+    {
+        OnRegister();
+    }
+
+    if(FApp::CanEverRender() && !bRenderStateCreated && WorldPrivate->Scene && ShouldCreateRenderState())
+    {
+        CreateRenderState_Concurrent(Context);
+    }
+    CreatePhysicsState();
+}
+```  
+
+```cpp
+oid FRegisterComponentContext::Process()
+{
+	FSceneInterface* Scene = World->Scene;
+	ParallelFor(AddPrimitiveBatches.Num(),
+    [&](int32 Index))
+    {
+        if(!AddPrimitiveBatches[Index]->IsPendingKill())
+        {
+            Scene->AddPrimitive(AddPrimitiveBatches[Index]);
+        }
+    },
+    !FApp::ShouldUseThreadingForPerformance()
+    AddPrimitiveBatches.Empty();
+}
+```
+
+The first loop registers all ActorComponents with the world. Every ActorComponent within every Actor is registered, which does 3 important things for the component:
