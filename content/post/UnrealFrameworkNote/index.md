@@ -1,6 +1,6 @@
 +++
 author = "NekoRAM7"
-title = "UE Framework-How to start the game"
+title = "UE Framework-From int main() to BeginPlay()"
 date = "2022-05-08"
 description = "An article to show the procedure to start a game powered by Unreal Engine."
 tags = [
@@ -21,7 +21,6 @@ This article offers an insight into the framework of UE, by analyizng the steps 
 
 ## Game Loop
 ```cpp
-// 游戏循环的大致过程
 int main()
 {
     init();
@@ -36,9 +35,9 @@ int main()
 ```
 
 ## Launch
-游戏通过各个平台的launch文件启动。
+The game launches via the launch file of the specific platform.
 ```cpp
-// 简化后的launch.cpp
+// Simplified launch.cpp
 #include "LaunchEngineLoop.h"
 
 FEngineLoop GEngineLoop;
@@ -47,7 +46,7 @@ bool GIsRequestingExit = false;
 int32 GuardedMain(const TCHAR* CmdLine)
 {
     // Run early Initialization, load engine modules
-    int32 ErrorLevel = GEngineLoop.PreInit(CmdLine); // PreInit加载了大多数模块
+    int32 ErrorLevel = GEngineLoop.PreInit(CmdLine); // Most modules are loaded in PreInit
     if(ErrorLevel != 0 || GisRequestingExit)
     {
         return ErrorLevel;
@@ -67,12 +66,13 @@ int32 GuardedMain(const TCHAR* CmdLine)
     return ErrorLevel;
 }
 ```
-## GEngineLoop.PreInit（）
-引擎的源代码分为多个模块，模块系统有助于确保源代码的不同部分之间的依赖关系是可管理的，并确保只加载所需的模块。
-![G1](Photos/1.JPG "Modules")
-在Game Loop的`PreInit`阶段会先加载一些低级模块，为后续的初始化做准备，如定义基本类型。
+## `GEngineLoop.PreInit()
+The source code is divided into modules.  
+A module system helps ensure that dependencies between different parts of the source code are manageable and that only the required modules are loaded.
+![](1.JPG "Modules")
 
-### 加载顺序：
+In the `PreInit` of the game loop, some basic modules are loaded in preparation for subsequent initialization, such as defining primitive types.
+### Load Sequence：
 #### 1. LoadCoreModules
 CoreUObject
 #### 2. LoadPreInitModules
@@ -96,44 +96,47 @@ RenderCore
    PacketHandler
    ...
 #### 5. Project & Plugin (Default Point)
-   GamePlay Codes
-### 模块加载流程
-1.首先，引擎注册该模块中定义的所有`UObject`类，从而被反射系统获知，并且为每个类构造一个CDO(Class Default Object)。CDO是对类的默认状态的记录，并且充当之后的继承的原型。引擎循环分配CDO，运行其构造函数，并传递父类的CDO作为模板。因此构造函数中不应该包含Gameplay代码。
-2.第二，引擎调用了模块的`StartupModule`函数，其与`ShutdownModule`相对应，从而在模块的生命周期中执行所需的初始化。
+GamePlay Codes
+### Module Loading Process
 
-综上，`GEngineLoop.PreInit()`加载了后续初始化所需的底层系统、引擎块、工程以及插件模块。
+1. First, the engine registers all the `UObject` classes defined in the module, which are known by the reflection system, and constructs a `Class Default Object` (CDO) for each Class. The CDO is a record of the default state of the class and serves as a prototype for subsequent inheritance. The engine circulates the CDO, runs its constructor, and passes the parent class's CDO as a template. Therefore there should be no Gameplay code in the constructor.
+2. Second, the engine calls module's `StartupModule` function, which corresponds to `ShutdownModule` to perform the required initialization during module's lifetime. 
+
+To sum up, `GEngineLoop.PreInit()` loads the basic system, engine blocks, gameplay code, and plug-in modules, all of which are required for subsequent initialization.
 
 ## GEngineLoop.Init()
 
-### 创建UGameEngine实例
+### Create Instance of UGameEngine
 ```cpp
 GEngine = NewObject<UEngine>(GetTransientPackage(), EngineClass);
-```
-`UEngine`派生出`UEditorEngine`与`UGameEngine`。
- 引擎首先检查配置文件来决定使用哪个类，然后创建该类的一个实例`GEngine`，并将其作为全局的UGameEngine实例。
-`GEngine`在Engine/Engine.h声明。
-### 初始化GEngine
+``` 
+ The engine firstly checks the configuration to decide use which class, then creates the instance `GEngine` of the class as global `UGameEngine` instance.  
+ `GEngine` is declared in `Engine/Engine.h`. 
+### Initialize GEngine
+
 ```cpp
 // Initialize the engine: this creates UGameInstance and UGameViewPortClient
 GEngine->ParseCommandline();
 GEngine->Init(this);
 FCoreDelegates::OnPostEngineInit.Broadcas();
 ```
-初始化后引擎会触发一个全局委托`OnPostEngineInit`来指示引擎现已初始化。
-### 初始化所有后加载的模块
+When `GEngine` is initialized, a global delegate is fired to indicate that the Engine is now initialized.  
+
+### Initialize any late-loaded modules
 ```cpp
 // Initialize any late-loaded modules
 IProjectManager::Get().LoadModulesForProject(EloadingPhase::PostEngineInit);
 IPluginManager::Get().LoadMoudlesForEnabledPlugings(EloadingPhase::PostEngineInit);
 ```
+The engine loads any project or plugin modules that have been configured for late loading.  
 
-至此，引擎启动，前期初始化完成。
+Now, the engine is started and initialization is complete.
 
-### 进入Map
-UEngine类能够使玩家在引擎启动后进入地图中。
-引擎能够浏览到一个URL， 其表示要作为客户端连接的服务器地址（本地为127.0.0.1），也可以表示要在本地加载的地图的名称。
+### Load Map
+`UEngine` class enables user to load into a map and start playing.  
+The Engine is able to browse to an URL, which can represent either a server address to connect to as a client, or the name of a map to load up locally.
 
-## 引擎启动后的初始化
+## Engine Initialization
 ```cpp
 // In GameEngine.cpp； UGameEngine::Init()
 
@@ -141,7 +144,10 @@ UEngine类能够使玩家在引擎启动后进入地图中。
 GetGameUserSettings()->LoadSettings();
 GetGameUserSettings()->ApplyNonResolutionSettings();
 
+// Create UGameInstance, UGameViewportClient and ULocalPlayer 
+
 // Create an UGameInstance using the class specified by project config
+// After UE4.4, UGameInstance was spun off from the UGameEngine class to handle some of the more project-specific functionality.
 FSoftClassPath GameInstanceClassName = GetDefault<UGameMapsSettings>()->GameInstanceClass;
 UClass* GameInstanceClass = LoadObject<UClass>(nullptr, *GameInstanceClassName.ToString());
 GameInstance = NewObject<UGameInstance>(this, GameInstanceClass);
@@ -150,6 +156,7 @@ GameInstance = NewObject<UGameInstance>(this, GameInstanceClass);
 GameInstance->InitializeStandalone();
 
 // Create an UGameViewportClient and initialize it
+// UGameViewportClient is essentially a high-level interface for the rendering, audio, and input systems, which is between UEngine and ULocalPlayer.
 UGameViewportCLient* ViewportClient = NewObject<UGameViewportClient>(this, GameViewportClientClass);
 ViewportClient->Init(*GameInstance->GetWorldContext(), GameInstance);
 GameViewport = ViewportClient;
@@ -157,12 +164,12 @@ GameInstance->GetWorldContext()->GameViewport = ViewportClient;
 CreateGameViewport(ViewportClient);
 
 // Create a ULocalPlayer and associate it with the view client
+// ULocalPlayer represents the user who is sitting in front of the screen
 FString Error;
 ViewportClient->SetupInitalLocalPlayer(Error);
 UGameViewportClient::OnviewportCreated().Broadcast();
 
 ```
-加载地图前,引擎通过创建`UGameInstance`, `UGameViewportClient`和`ULocalPlayer`来进行初始化
-`ULocalPlayer`可以被视为代表屏幕前的用户。
-`UGameViewportClient`本质上是渲染、音频和输入系统的高级接口，即用户和引擎之间的接口。
-`UGameInstance`处理一些特定于项目的功能，GameEngine中只能创建唯一一个。
+Now, we have an `UGameEngine`, an `UGameInstance`, an `UGameViewportClient` and an `ULocalPlayer`. The game is ready to start.
+
+![](2.JPG)
