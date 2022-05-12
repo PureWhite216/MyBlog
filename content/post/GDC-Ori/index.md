@@ -1,8 +1,8 @@
 +++
 author = "NekoRAM7"
-title = "Narrative Design and Visual Storytelling in Ori"
+title = "Visual Storytelling in Ori"
 date = "2022-05-09"
-description = "A note of the presentation by Jeremy Gritton and Chris McEntee in GDC."
+description = "A note of the sharing by Jeremy Gritton in GDC."
 tags = [
     "GameDev",
     "Storytelling",
@@ -17,7 +17,6 @@ aliases = ["migrate-from-jekyl"]
 image = "Image.jpg"
 +++
 
-This article offers an insight into the framework of UE, by analyizng the steps to take when an UE game is launched.
 <!--more-->
 
 ## Visual Storytelling
@@ -93,8 +92,6 @@ The Story is circular.
 ![](24.JPG)
 ![](25.JPG)
 
-
-## Narrative Design
 
 
 

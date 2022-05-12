@@ -21,6 +21,7 @@ This article offers an insight into the framework of UE, by analyizng the steps 
 
 ## Game Loop
 ```cpp
+// A simplified Game Loop
 int main()
 {
     init();
@@ -192,7 +193,7 @@ bool UEngine::LoadMap(FWorldContext& WorldContext, FURL URL, class UPendingNetGa
     // Clean up the world, destroy all actors
 
     // Cache the current time so we can report total duration post-load
-    double StartTime =  FPlatformTime::Seconds();
+    double StartTime = FPlatformTime::Seconds();
 
     // Notify the GameInstance of the map change in case it wants to load assets
     WorldContext.OwningGameInstance->PreloadContentForURL(URL);
